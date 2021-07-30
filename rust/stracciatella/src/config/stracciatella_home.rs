@@ -2,7 +2,7 @@ use crate::fs::resolve_existing_components;
 use std::path::PathBuf;
 
 #[cfg(not(windows))]
-const STRACCIATELLA_HOME_DIR_NAME: &str = ".ja2";
+const STRACCIATELLA_HOME_DIR_NAME: &str = "ja2";
 #[cfg(windows)]
 const STRACCIATELLA_HOME_DIR_NAME: &str = "JA2";
 
@@ -11,6 +11,7 @@ const STRACCIATELLA_HOME_DIR_NAME: &str = "JA2";
 pub fn find_stracciatella_home() -> Result<PathBuf, String> {
     #[cfg(not(target_os = "android"))]
     let base = dirs::home_dir();
+    let base = dirs::config_dir();
     #[cfg(target_os = "android")]
     let base = match crate::android::get_android_app_dir() {
         Ok(v) => Some(v),
