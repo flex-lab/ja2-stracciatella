@@ -29,7 +29,7 @@ To get in touch with the developers you can use the [#ja2-stracciatella Discord 
 
 ### Without the optional launcher
 
-3. Start the game the first time.  It will create the configuration file `%USERPROFILE%\Documents\JA2\ja2.json` on Windows or `~/.ja2/ja2.json` on Unix-like systems.
+3. Start the game the first time.  It will create the configuration file `%USERPROFILE%\Documents\JA2\ja2.json` on Windows or `~/.config/ja2/ja2.json` on Unix-like systems.
 
 4. Edit the configuration file and set parameter game_dir to point to the directory where the original game was installed during step 1.  For example, `D:\games\ja2\` (on Windows) or `/home/user/games/ja2-installed` (on Linux).
 
